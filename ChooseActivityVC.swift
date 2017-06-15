@@ -11,7 +11,6 @@ import MapKit
 
 class ChooseActivityVC: UIViewController, MKMapViewDelegate {
     
-    
     @IBOutlet weak var mapView: MKMapView!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,5 +24,31 @@ class ChooseActivityVC: UIViewController, MKMapViewDelegate {
     }
     @IBAction func crossPressed(_ sender: Any) {
         dismiss(animated: true, completion: nil)
+    }
+    @IBAction func act1(_ sender: Any) {
+        performSegue(withIdentifier: "choosetime", sender: self)
+    }
+    @IBAction func act(_ sender: Any) {
+        performSegue(withIdentifier: "choosetime", sender: self)
+    }
+    @IBAction func act3(_ sender: Any) {
+        performSegue(withIdentifier: "choosetime", sender: self)
+    }
+    @IBAction func act4(_ sender: Any) {
+        performSegue(withIdentifier: "choosetime", sender: self)
+    }
+    @IBAction func act5(_ sender: Any) {
+        performSegue(withIdentifier: "choosetime", sender: self)
+    }
+    @IBAction func act6(_ sender: Any) {
+        performSegue(withIdentifier: "choosetime", sender: self)
+    }
+    @IBAction func act7(_ sender: Any) {
+        performSegue(withIdentifier: "choosetime", sender: self)
+    }
+    @IBAction func act8(_ sender: Any) {
+        performSegue(withIdentifier: "choosetime", sender: self)
+    }
+    @IBAction func act9(_ sender: Any) {
     }
 }
