@@ -11,6 +11,9 @@ import MapKit
 
 class ChooseTimeVC: UIViewController, MKMapViewDelegate {
     
+    
+    @IBOutlet weak var timer: UIDatePicker!
+    @IBOutlet weak var timebg: UIView!
     @IBAction func backPressed(_ sender: Any) {
         dismiss(animated: true, completion: nil)
     }
@@ -18,9 +21,10 @@ class ChooseTimeVC: UIViewController, MKMapViewDelegate {
     @IBAction func CrossPressed(_ sender: Any) {
         self.view.window!.rootViewController?.dismiss(animated: true, completion: nil)
     }
-    @IBOutlet weak var mapView: MKMapView!
+  
     override func viewDidLoad() {
         super.viewDidLoad()
+        timebg.layer.cornerRadius = 30.0;
 
         // Do any additional setup after loading the view.
     }
@@ -29,5 +33,11 @@ class ChooseTimeVC: UIViewController, MKMapViewDelegate {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
+    @IBAction func cl(_ sender: Any) {
+        performSegue(withIdentifier: "chooseLocation", sender: self)
+    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.destination is ChooseLocationVC{
+        }
+    }
 }
